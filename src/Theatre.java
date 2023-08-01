@@ -77,7 +77,7 @@ public class Theatre {
         boolean result = (min > 0 || seatsPerRow >= count || (max - min + 1) >= count);
         result = result && seats.contains(new Seat(first, min));
         if (!result) {
-            System.out.printf("Invalid! %1$d seats between " + "%2$c[%3$d-%4$d]-%5c[%3$d-%4$d] Try Again", count, first, min, max, last);
+            System.out.printf("Invalid! %1$d seats between " + "%2$c[%3$d-%4$d]-%5$c[%3$d-%4$d] Try Again", count, first, min, max, last);
             System.out.printf(": Seat must be between %s and %s%n", seats.first().seatNum, seats.last().seatNum);
         }
         return result;
